@@ -38,7 +38,6 @@ int main(int argc, char* argv[]){
 	my_display(n2.get_v());
 
 	List l1();
-//	List l2(n1);
 	
 	return EXIT_SUCCESS;
 	

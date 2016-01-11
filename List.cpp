@@ -5,7 +5,8 @@
 //Contructors
 //Default (empty list)
 List::List(){
-	head_=nullptr;
+	Node n;
+	head_=new Node(n);
 	nb_elts=0;
 }
 
@@ -26,12 +27,16 @@ List::~List(){
 	delete head_;
 }
 
-//~ 
-//~ // TO DOOOOOOOOOOOOOOOO!!!!!!!!!!!!!!!!!
-//~ //Add and substract an element at the end of the list
-//~ void List::PushBack(){
-	//~ //On parcourt la liste jusqu'à atteindre le dernier element
-//~ }
+int List::get_nb_elts(){
+	return nb_elts;
+}
+// TO DOOOOOOOOOOOOOOOO!!!!!!!!!!!!!!!!!
+//Add and substract an element at the end of the list
+void List::PushBack(Node* addr){
+	nb_elts++;
+	
+}
 
-//~ void List::PopBack(){
-//~ }
+void List::PopBack(){
+	nb_elts--;
+}

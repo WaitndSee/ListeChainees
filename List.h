@@ -3,6 +3,7 @@
 
 class List{
 	
+	private:
 	protected:
 		Node* head_;
 		int nb_elts;
@@ -11,14 +12,18 @@ class List{
 		//Constructors
 		List();
 		List(const List& model);
-		List(Node first_element);
+	//	List(Node first_element);  // Finalement ce n'est pas dans le cahier des charges
 		
 		//Destructor
 		~List();
 		
+		//Getters
+		int get_nb_elts();
+		
 		//Add and substract an element at the end of the list
-		//~ void PushBack();
-		//~ void PopBack();
+		void PushBack(Node* n);
+		void PopBack();
+	
 };
 
 #endif
