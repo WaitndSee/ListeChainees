@@ -16,9 +16,14 @@ List::List(const List& model){
 }
 
 //Gives the first element
-List::List(Node* first_element){
-	head_=first_element;
-	nb_elts=0; //problem implement method to count elements
+//~ List::List(Node first_element){
+	//~ head_= new Node(first_element);
+	//~ nb_elts=0; //problem implement method to count elements
+//~ }
+
+//Destructor
+List::~List(){
+	delete head_;
 }
 
 //~ 

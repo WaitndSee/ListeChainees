@@ -11,7 +11,10 @@ class List{
 		//Constructors
 		List();
 		List(const List& model);
-		List(Node* first_element);
+		List(Node first_element);
+		
+		//Destructor
+		~List();
 		
 		//Add and substract an element at the end of the list
 		//~ void PushBack();
