@@ -22,8 +22,6 @@ class Node{
 		
 		//Setters
 		void set_next(Node* next_pointer);
-		void set_ptrv(Vector* newv);
-		
 		
 		//Destructor
 		~Node();

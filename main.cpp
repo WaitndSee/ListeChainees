@@ -24,7 +24,7 @@ int main(int argc, char* argv[]){
 	Vector v2(3,4);
 	printf("v2: ");
 	my_display(v2);
-	
+
 	Node n1=Node(v2);
 	printf("Vector of Node n1 (contains v2): ");
 	my_display(n1.get_v());
@@ -36,11 +36,7 @@ int main(int argc, char* argv[]){
 	
 	printf("Vector of Node n2 (contains v1): ");
 	my_display(n2.get_v());
-	
-	n2.set_ptrv(&v2);
-	printf("Vector of Node n2 (contains v2): ");
-	my_display(n2.get_v());
-	
+
 	return EXIT_SUCCESS;
 	
 }

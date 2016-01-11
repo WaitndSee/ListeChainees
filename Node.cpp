@@ -39,9 +39,6 @@ void Node::set_next(Node* next_pointer){
 	next=next_pointer;
 }
 
-void Node::set_ptrv(Vector* newv){
-	ptrv=newv;
-}
 
 //Destructor
 Node::~Node(){
