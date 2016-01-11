@@ -10,7 +10,8 @@
 //Default
 Node::Node(){
 	next=nullptr;
-	ptrv=nullptr;
+	Vector v;
+	ptrv=new Vector(v);
 }
 
 //Copy

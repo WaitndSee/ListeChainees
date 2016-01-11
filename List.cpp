@@ -21,11 +21,12 @@ List::List(Node* first_element){
 	nb_elts=0; //problem implement method to count elements
 }
 
-// TO DOOOOOOOOOOOOOOOO!!!!!!!!!!!!!!!!!
-//Add and substract an element at the end of the list
-void List::PushBack(){
-	//On parcourt la liste jusqu'à atteindre le dernier element
-}
+//~ 
+//~ // TO DOOOOOOOOOOOOOOOO!!!!!!!!!!!!!!!!!
+//~ //Add and substract an element at the end of the list
+//~ void List::PushBack(){
+	//~ //On parcourt la liste jusqu'à atteindre le dernier element
+//~ }
 
-void List::PopBack(){
-}
+//~ void List::PopBack(){
+//~ }

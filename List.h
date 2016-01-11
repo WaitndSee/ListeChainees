@@ -14,8 +14,8 @@ class List{
 		List(Node* first_element);
 		
 		//Add and substract an element at the end of the list
-		void PushBack();
-		void PopBack();
+		//~ void PushBack();
+		//~ void PopBack();
 };
 
 #endif
