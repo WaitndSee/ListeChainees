@@ -1,4 +1,8 @@
+#ifndef VECTOR_H
+#define VECTOR_H
+
 class Vector {
+	
   public :
   //~Getters
     float get_x();
@@ -20,6 +24,7 @@ class Vector {
     float x;
     float y;
     float norm;
-    
-  private :
+  
 };
+
+#endif
