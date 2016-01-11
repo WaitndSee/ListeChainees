@@ -1,0 +1,250 @@
+/**
+ * https://svn.insa-lyon.fr/svn/Ysolie_s_team/public_html/
+ * 
+ * LES GESTIONNAIRES DE VERSION
+ * 
+ * Subversion (svn) GIT , Mercurial
+ * 
+ * Permet de versionner des fichiers textes (latex,code source ...)
+ * 
+ * On peut récupérer , modifier puis commit le même fichier
+ * #CestToutCommeLeSVN
+ * 
+ * Le dépôt contient toutes les révisions qui ont été commit
+ * sur le serveur --> historique complet
+ * 
+ * svn checkout
+ * svn update
+ * svn status
+ * svn add
+ * svn commit -m "Ceci ne sert a rien"
+ * 
+ * Chaque révision est affilié à un auteur qui devra commenter 
+ * sa révision (On doit faire un "log")
+ * 
+ * Chaque utilisateur possède son propre dépôt local (.git)
+ * 
+ * Dans notre cas, on utilisera un workflow centralisé (avec un serveur)
+ * Fichier <-> Depot local <-> Depot distant
+ * 
+ * Différents états d'un fichier :
+ * 
+ * Untracked -> Unmodified -> Modified -> Staged 
+ * 
+ * Les commandes :
+ * 
+ * git add
+ * git rm
+ * git stage
+ * git commit
+ * 
+ * Commit SOUVENT (10-20 minutes)/**
+ * https://svn.insa-lyon.fr/svn/Ysolie_s_team/public_html/
+ * 
+ * LES GESTIONNAIRES DE VERSION
+ * 
+ * Subversion (svn) GIT , Mercurial
+ * 
+ * Permet de versionner des fichiers textes (latex,code source ...)
+ * 
+ * On peut récupérer , modifier puis commit le même fichier
+ * #CestToutCommeLeSVN
+ * 
+ * Le dépôt contient toutes les révisions qui ont été commit
+ * sur le serveur --> historique complet
+ * 
+ * svn checkout
+ * svn update
+ * svn status
+ * svn add
+ * svn commit -m "Ceci ne sert a rien"
+ * 
+ * Chaque révision est affilié à un auteur qui devra commenter 
+ * sa révision (On doit faire un "log")
+ * 
+ * Chaque utilisateur possède son propre dépôt local (.git)
+ * 
+ * Dans notre cas, on utilisera un workflow centralisé (avec un serveur)
+ * Fichier <-> Depot local <-> Depot distant
+ * 
+ * Différents états d'un fichier :
+ * 
+ * Untracked -> Unmodified -> Modified -> Staged 
+ * 
+ * Les commandes :
+ * 
+ * git add
+ * git rm
+ * git stage
+ * git commit
+ * 
+ * Commit SOUVENT (10-20 minutes)
+ * Faire des logs courts (-50 caracteres)
+ * 
+ * Deux interface
+ * 
+ * GITK
+ * GUI
+ * 
+ * git status --> donne l'état de tout les fichiers (same svn status)
+ * 
+ * git log --> donne une version peu lisible de tout les commits
+ * 
+ * git log --pretty=oneline
+ * git log --pretty=format:"%h - %an : %s"
+ * 
+ * pour enlever un fichier du commit : git commit -- <file>
+ * 
+ * Il est possible de bypasser l'index : à utiliser avec parcimonie
+ * 
+ * git commit -a -m " Add content to bar"
+ * 
+ * CONFIGURATION DE GIT
+ * 
+ * git config --global user.name "Antoine Weber"
+ * git config --global user.mail "antoine.weber@insa-lyon.fr"
+ * 
+ * git config --global core.editor nano
+ * 
+ * git config --global alias.co checkout
+ * git config --global alias.ci commit
+ * git config --global alias.st statuss
+ * 
+ * git config --global alias.lg "log --pretty=format:\"h%h - %an : %s\""
+ * 
+ * On peut créer un TAG
+ * 
+ * git tag v0.1
+ * 
+ * SHA1 --> identifiant du commit
+ * 
+ * Les BRANCHES  --> utilise pour faire plusieurs version de la même 
+ * application / utile pour faires des tests tout en laisant le code 
+ * source tranquille
+ *  
+ * 
+ * git branch featureA
+ * 
+ * merge branch "featureA"
+ * 
+ * car bar
+ * git mergetool
+ * 
+ * git config --global merge.tool meld
+ * git config --global mergetool.meld.cmd 'meld $LOCAL $MERGED $REMOTE'
+ * git config --global mergetool.meld.trustExitCode false
+ * 
+ * merge --abort
+ * 
+ * INTERACTION AVEC UN SERVEUR
+ * 
+ * git push --> permet de mettre en ligne votre révision 
+ * 
+ * git fetch --> permet de récupérer les commit posé sur le serveur
+ * 					mais qui ne sont pas encore sur votre git local
+ * 
+ * git merge origin/master  --> permet de résoudre les conflits 
+ * 							entre votre master et l'origin du serveur
+ * 
+ * git mergetool
+ * 
+ * git clone --> permet de cloner un depot distant sur sa machine locale
+ * 
+ * 
+ * 
+ * */
+
+
+#include <iostream>
+
+int main(int argc, char **argv)
+{
+	
+	return 0;
+}
+
+
+ * Faire des logs courts (-50 caracteres)
+ * 
+ * Deux interface
+ * 
+ * GITK
+ * GUI
+ * 
+ * git status --> donne l'état de tout les fichiers (same svn status)
+ * 
+ * git log --> donne une version peu lisible de tout les commits
+ * 
+ * git log --pretty=oneline
+ * git log --pretty=format:"%h - %an : %s"
+ * 
+ * pour enlever un fichier du commit : git commit -- <file>
+ * 
+ * Il est possible de bypasser l'index : à utiliser avec parcimonie
+ * 
+ * git commit -a -m " Add content to bar"
+ * 
+ * CONFIGURATION DE GIT
+ * 
+ * git config --global user.name "Antoine Weber"
+ * git config --global user.mail "antoine.weber@insa-lyon.fr"
+ * 
+ * git config --global core.editor nano
+ * 
+ * git config --global alias.co checkout
+ * git config --global alias.ci commit
+ * git config --global alias.st statuss
+ * 
+ * git config --global alias.lg "log --pretty=format:\"h%h - %an : %s\""
+ * 
+ * On peut créer un TAG
+ * 
+ * git tag v0.1
+ * 
+ * SHA1 --> identifiant du commit
+ * 
+ * Les BRANCHES  --> utilise pour faire plusieurs version de la même 
+ * application / utile pour faires des tests tout en laisant le code 
+ * source tranquille
+ *  
+ * 
+ * git branch featureA
+ * 
+ * merge branch "featureA"
+ * 
+ * car bar
+ * git mergetool
+ * 
+ * git config --global merge.tool meld
+ * git config --global mergetool.meld.cmd 'meld $LOCAL $MERGED $REMOTE'
+ * git config --global mergetool.meld.trustExitCode false
+ * 
+ * merge --abort
+ * 
+ * INTERACTION AVEC UN SERVEUR
+ * 
+ * git push --> permet de mettre en ligne votre révision 
+ * 
+ * git fetch --> permet de récupérer les commit posé sur le serveur
+ * 					mais qui ne sont pas encore sur votre git local
+ * 
+ * git merge origin/master  --> permet de résoudre les conflits 
+ * 							entre votre master et l'origin du serveur
+ * 
+ * git mergetool
+ * 
+ * git clone --> permet de cloner un depot distant sur sa machine locale
+ * 
+ * 
+ * 
+ * */
+
+
+#include <iostream>
+
+int main(int argc, char **argv)
+{
+	
+	return 0;
+}
+
