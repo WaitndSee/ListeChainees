@@ -34,14 +34,36 @@ int List::get_nb_elts(){
 Node* List::get_head(){
 	return head_;
 }
-// TO DOOOOOOOOOOOOOOOO!!!!!!!!!!!!!!!!!
+
+//Setters
+void List::set_head(Node addr){
+	//TODO
+}
 //Add and substract an element at the end of the list
-void List::PushBack(Node* addr){
-	
+void List::PushBack(Node addr){
+	Node n(*head_);	
+	Node* temp=n.get_next();
+	while (temp!=nullptr){
+		n=*n.get_next();
+		temp=n.get_next();
+	}
+	n.set_next(&addr);
 	nb_elts++;
-	
 }
 
 void List::PopBack(){
+	Node n(*head_);	
+	Node* temp=n.get_next();
+	Node save;
+	while (temp!=nullptr){
+		save=n;
+		n=*n.get_next();
+		temp=n.get_next();
+	}
+	save.set_next(nullptr);
 	nb_elts--;
+}
+
+void List::Insert(Node addr){
+	//TODO
 }

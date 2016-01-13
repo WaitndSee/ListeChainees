@@ -12,7 +12,6 @@ class List{
 		//Constructors
 		List();
 		List(const List& model);
-	//	List(Node first_element);  // Finalement ce n'est pas dans le cahier des charges
 		
 		//Destructor
 		~List();
@@ -21,9 +20,13 @@ class List{
 		int get_nb_elts();
 		Node* get_head();
 		
-		//Add and substract an element at the end of the list
-		void PushBack(Node* n);
+		//Setters
+		void set_head(Node n);
+		
+		//Methods
+		void PushBack(Node n);
 		void PopBack();
+		void Insert(Node n);
 	
 };
 
