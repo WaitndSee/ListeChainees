@@ -83,5 +83,22 @@ void List::PopBack(){
 }
 
 void List::Insert(Node* addr,int position){
-	//TODO
+	if(position<nb_elts+1){
+		Node* n;
+		n=head_;
+		Node* temp;
+		int i=0;
+		while (i<position){
+			n=(*n).get_next();
+			temp=(*n).get_next();
+			i++;
+		}
+		(*n).set_next(addr);
+		n=(*n).get_next();
+		(*n).set_next(temp);
+		nb_elts++;
+		
+		printf("Insertion d'un élement\n"); 
+		}
+	printf("Position trop élevée\n"); 
 }

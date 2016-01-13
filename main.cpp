@@ -42,6 +42,7 @@ int main(int argc, char* argv[]){
 
 	List l1;
 	l1.PushBack(&n1);
+	l1.PushBack(&n3);
 	
 	Node* nTest;
 	Vector vTest;
@@ -54,7 +55,25 @@ int main(int argc, char* argv[]){
 	vTest=(*nTest).get_v();
 	my_display(vTest);
 	
-	l1.PushBack(&n3);
+	nTest=(*nTest).get_next();
+	vTest=(*nTest).get_v();
+	my_display(vTest);
+	
+	l1.Insert(&n2,1);
+	
+	
+	nTest=l1.get_head();
+	vTest=(*nTest).get_v();
+	my_display(vTest);
+	
+	nTest=l1.get_head();
+	nTest=(*nTest).get_next();
+	vTest=(*nTest).get_v();
+	my_display(vTest);
+	
+	nTest=(*nTest).get_next();
+	vTest=(*nTest).get_v();
+	my_display(vTest);
 	
 	nTest=(*nTest).get_next();
 	vTest=(*nTest).get_v();
