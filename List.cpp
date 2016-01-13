@@ -27,12 +27,17 @@ List::~List(){
 	delete head_;
 }
 
+//Getters
 int List::get_nb_elts(){
 	return nb_elts;
+}
+Node* List::get_head(){
+	return head_;
 }
 // TO DOOOOOOOOOOOOOOOO!!!!!!!!!!!!!!!!!
 //Add and substract an element at the end of the list
 void List::PushBack(Node* addr){
+	
 	nb_elts++;
 	
 }

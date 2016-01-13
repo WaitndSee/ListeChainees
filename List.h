@@ -19,6 +19,7 @@ class List{
 		
 		//Getters
 		int get_nb_elts();
+		Node* get_head();
 		
 		//Add and substract an element at the end of the list
 		void PushBack(Node* n);
