@@ -56,10 +56,10 @@ void List::set_head(Node* addr){
 void List::PushBack(Node* addr){
 	Node* n;
 	n=head_;
-	Node* temp=(*n).get_next();
-	while (temp!=nullptr){
+	int i=0;
+	while (i<nb_elts){
 		n=(*n).get_next();
-		temp=n;
+		i++;
 	}
 	(*n).set_next(addr);
 	nb_elts++;
@@ -70,15 +70,13 @@ void List::PushBack(Node* addr){
 void List::PopBack(){
 	Node* n;
 	n=head_;	
-	Node* temp=(*n).get_next();
-	Node save;
-	while (temp!=nullptr){
-		save=(*n);
+	int i=0;
+	while (i<nb_elts-1){
 		n=(*n).get_next();
-		temp=n;
+		i++;
 	}
 	Node* p=nullptr;
-	save.set_next(p);
+	(*n).set_next(p);
 	nb_elts--;
 
 	printf("The empire strikes back\n"); 
