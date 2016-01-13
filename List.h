@@ -26,7 +26,7 @@ class List{
 		//Methods
 		void PushBack(Node n);
 		void PopBack();
-		void Insert(Node n);
+		void Insert(Node n,int position);
 	
 };
 

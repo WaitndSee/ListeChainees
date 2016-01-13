@@ -24,6 +24,7 @@ Node::Node(const Node& model){
 Node::Node(Vector v){
 	next=nullptr;
 	ptrv=new Vector(v);
+	//printf("Capitaine, Node crée mon Capitaine !\n"); 
 }
 	
 //Getters

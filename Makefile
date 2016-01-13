@@ -1,7 +1,7 @@
 all: main
 
 main: main.o Vector.o Node.o List.o
-	g++ main.o Vector.o Node.o -o main -g
+	g++ main.o Vector.o Node.o List.o -o main -g
 	
 main.o: main.cpp Vector.h
 	g++ -c main.cpp -o main.o -std=c++11 -g

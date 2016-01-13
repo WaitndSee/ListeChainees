@@ -37,7 +37,9 @@ int main(int argc, char* argv[]){
 	printf("Vector of Node n2 (contains v1): ");
 	my_display(n2.get_v());
 
-	List l1();
+	List l1;
+	//l1.PushBack(n1);
+	
 	
 	return EXIT_SUCCESS;
 	
