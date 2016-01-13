@@ -7,6 +7,7 @@ class List{
 	protected:
 		Node* head_;
 		int nb_elts;
+		
 	
 	public:
 		//Constructors
@@ -21,13 +22,12 @@ class List{
 		Node* get_head();
 		
 		//Setters
-		void set_head(Node n);
+		void set_head(Node* n);
 		
 		//Methods
-		void PushBack(Node n);
+		void PushBack(Node* n);
 		void PopBack();
-		void Insert(Node n,int position);
-	
+		void Insert(Node* n,int position);
 };
 
 #endif

@@ -4,6 +4,7 @@
 class Node{
 
 	protected:
+		
 		Node* next;
 		Vector* ptrv;
 		

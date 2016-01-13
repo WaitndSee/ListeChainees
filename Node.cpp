@@ -12,6 +12,7 @@ Node::Node(){
 	next=nullptr;
 	Vector v;
 	ptrv=new Vector(v);
+	
 }
 
 //Copy
@@ -33,6 +34,7 @@ Vector Node::get_v(){
 }
 
 Node* Node::get_next(){
+	
 	return next;
 }
 
@@ -44,5 +46,5 @@ void Node::set_next(Node* next_pointer){
 
 //Destructor
 Node::~Node(){
-	delete ptrv;
+	//~ delete ptrv;
 }

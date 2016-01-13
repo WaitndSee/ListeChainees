@@ -24,6 +24,9 @@ int main(int argc, char* argv[]){
 	Vector v2(3,4);
 	printf("v2: ");
 	my_display(v2);
+	
+	Vector v3(17,72);
+	Node n3=Node(v3);
 
 	Node n1=Node(v2);
 	printf("Vector of Node n1 (contains v2): ");
@@ -38,9 +41,29 @@ int main(int argc, char* argv[]){
 	my_display(n2.get_v());
 
 	List l1;
-	//l1.PushBack(n1);
+	l1.PushBack(&n1);
+	
+	Node* nTest;
+	Vector vTest;
+	nTest=l1.get_head();
+	vTest=(*nTest).get_v();
+	my_display(vTest);
+	
+	nTest=l1.get_head();
+	nTest=(*nTest).get_next();
+	vTest=(*nTest).get_v();
+	my_display(vTest);
+	
+	l1.PushBack(&n3);
+	
+	nTest=(*nTest).get_next();
+	vTest=(*nTest).get_v();
+	my_display(vTest);
 	
 	
-	return EXIT_SUCCESS;
+	printf("J'ai parcouru le main. \n");
+	
+	
+	return 0;
 	
 }
